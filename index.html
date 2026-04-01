@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremy Strategy OS</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Jeremy Strategy OS</h1>
+        <nav id="nav"></nav>
+        <section class="focus-box">
+          <h3>Focus Filter</h3>
+          <label>
+            Week Priority
+            <select id="focusPriority">
+              <option value="all">All levels</option>
+              <option value="critical">Critical only</option>
+              <option value="high">High + Critical</option>
+            </select>
+          </label>
+          <label>
+            Scope
+            <select id="focusScope">
+              <option value="all">All pillars</option>
+            </select>
+          </label>
+          <button id="clearFocus" class="secondary">Reset Filter</button>
+        </section>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <input id="quickSearch" type="search" placeholder="Quick search stakeholders, actions, risks... (/)" />
+          <div class="topbar-meta">
+            <span id="todayDate"></span>
+            <button id="exportWeekly">Export Weekly Executive Review</button>
+          </div>
+        </header>
+        <section id="content"></section>
+      </main>
+    </div>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <h3></h3>
+        <div class="card-body"></div>
+      </article>
+    </template>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
